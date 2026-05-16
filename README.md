@@ -22,7 +22,3 @@ This repository contains my solutions as I practice and improve my skills.
 ## 🎯 Goal
 To become better at problem solving and competitive programming 🚀
 
-
-
-```cpp
-// Problem: https://codeforces.com/problemset/problem/... 
