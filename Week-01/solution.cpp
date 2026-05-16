@@ -343,10 +343,99 @@ int main() {
     return 0;
 }
 //=============================================================================
-// Priblem O sheet Tanta community vjuge : Merge Intervals 
-// https://vjudge.net/contest/756131#problem/O
+// Priblem J sheet Tanta community vjuge 
+// https://vjudge.net/problem/AtCoder-abc217_e/origin
 //=============================================================================
 
+
+
+
+
+
+
+
+//=============================================================================
+// Priblem K sheet Tanta community vjuge 
+// https://vjudge.net/problem/AtCoder-abc217_e/origin
+//=============================================================================
+
+
+
+
+
+
+
+
+
+
+
+//=============================================================================
+// Priblem M sheet Tanta community vjuge 
+// https://vjudge.net/problem/AtCoder-abc217_e/origin
+//=============================================================================
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+   int n ; cin >> n;
+   queue <long long > q;
+   priority_queue <long long, vector<long long>, greater<long long> > pq;
+   while (n--){
+       int type; cin >> type;
+       if (type == 1){
+           int x ; cin >> x;
+           q.push(x);
+       }else if (type == 2){
+           if (!pq.empty()){
+               cout << pq.top() << endl;
+               pq.pop();
+           }else {
+               cout << q.front() << endl;
+               q.pop();
+           }
+       }else {
+           while (!q.empty()){
+           pq.push(q.front());
+           q.pop();
+           }
+       }
+   }  
+    return 0;
+}
+//=============================================================================
+// Priblem N sheet Tanta community vjuge 
+// https://vjudge.net/problem/AtCoder-abc247_d/origin
+//=============================================================================
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+   int q ; cin >> q ;
+   deque <pair <long long, long long >> dq;
+   while (q--){
+       int type ; cin >> type ;
+       if (type == 1){
+          long long x , c; cin >> x >> c ;
+          dq.push_back({x,c});
+       }else{
+           long long c ; cin >> c ;
+               long long sum = 0;
+           while (c>0){
+               long long take = min (c, dq.front().second);
+               sum += dq.front().first*take;
+               c-= take;
+               if (take == dq.front().second){
+                   dq.pop_front();
+               }else{
+                   dq.front().second-= take;
+               }
+           }
+        cout << sum << endl;
+
+       }
+   }
+    return 0;
+}
 //=============================================================================
 // Priblem O sheet Tanta community vjuge : Merge Intervals 
 // https://vjudge.net/contest/756131#problem/O
