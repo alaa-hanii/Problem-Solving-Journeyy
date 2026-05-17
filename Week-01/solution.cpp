@@ -344,9 +344,35 @@ int main() {
 }
 //=============================================================================
 // Priblem J sheet Tanta community vjuge 
-// https://vjudge.net/problem/AtCoder-abc217_e/origin
+// https://vjudge.net/problem/CodeForces-1374C/origin
 //=============================================================================
+#include <bits/stdc++.h>
+using namespace std;
 
+int main() {
+    int t; cin >> t ;
+    while (t--){
+   int n ; cin >> n;
+   string s ; cin >> s;
+   stack <char> st;
+   int move = 0;
+   for (auto ch : s){
+       if ( ch == '('){
+           st.push(ch);
+       }else{
+           if (!st.empty()){
+               st.pop();
+           }else{
+               move++;
+           }
+       }
+   }
+   
+   cout << move << endl;
+    }
+  
+    return 0;
+}
 
 
 
@@ -356,9 +382,32 @@ int main() {
 
 //=============================================================================
 // Priblem K sheet Tanta community vjuge 
-// https://vjudge.net/problem/AtCoder-abc217_e/origin
+// https://vjudge.net/problem/CodeForces-1579E1/origin
 //=============================================================================
+#include <bits/stdc++.h>
+using namespace std;
 
+int main() {
+    int t; cin >> t ;
+    while (t--){
+   int n ; cin >> n;
+   deque <int> dq;
+   for (int i = 0 ; i<n ; i++){
+       int x ; cin >> x;
+       if (dq.empty() || x < dq.front ()){
+           dq.push_front (x);
+       }else{
+           dq.push_back(x);
+       }
+   }
+   for (int num : dq){
+       cout << num << " " ;
+   }
+   cout << endl;
+    }
+  
+    return 0;
+}
 
 
 
