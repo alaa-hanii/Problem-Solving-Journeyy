@@ -2,10 +2,7 @@
 // Problem A sheet Tanta community vjuge : Using vector 
 // https://vjudge.net/contest/756131#problem/A
 //=============================================================================
-#include <iostream>
-#include <vector>
-#include <string>
-#include <algorithm>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main() {
@@ -84,9 +81,7 @@ int main() {
 // Problem c sheet Tanta community vjuge 
 // https://vjudge.net/contest/756131#problem/C
 //=============================================================================
-#include <iostream>
-#include <deque>
-#include <vector>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main() {
